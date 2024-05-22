@@ -105,6 +105,7 @@ def fish(exclamation_region):
     print("Esperando la aparición del signo de admiración...")
     if find_exclamation_sign(signo_path, region=exclamation_region):
         print("Simulando la pulsación de la barra espaciadora para capturar")
+        time.sleep(1)
         keyboard.press(Key.space)
         keyboard.release(Key.space)
         print("Pulsación realizada. Pez capturado.")
