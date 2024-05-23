@@ -1,5 +1,5 @@
 
-# Digimon World: Next Order Fishing Bot
+# Digimon World: Next Order | Fishing Bot
 
 This project provides a Python script to automate fishing in the video game **Digimon World: Next Order**. Using this script, your character will automatically fish when near a fishing zone, detecting the exclamation sign to catch fish.
 
