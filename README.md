@@ -33,16 +33,24 @@ Open a terminal in the directory where you downloaded the script and run:
 python scriptdigimon.py
 ```
 
+Alternatively, you can use the executable file `scriptdigimon.exe` located in the `dist` folder. This executable was created using PyInstaller, so you don't need to install the dependencies to use it. Simply navigate to the `dist` folder and run:
+
+```sh
+./scriptdigimon.exe
+```
+
 The script will wait 5 seconds to allow you to position the game correctly and then start looking for the fishing area and the exclamation sign to initiate automatic fishing.
 
 ## Project Structure
 
 ```
 .
+├── build
+├── dist
+│   └── scriptdigimon.exe
 ├── img
 │   ├── pesca.png
 │   └── pesca_signo.png
-│       
 ├── scriptdigimon.py
 └── README.md
 ```
