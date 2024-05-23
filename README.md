@@ -1,11 +1,11 @@
 
 # Digimon World: Next Order Fishing Bot
 
-Este proyecto proporciona un script en Python para automatizar la pesca en el videojuego **Digimon World: Next Order**. Usando este script, tu personaje pescará automáticamente cuando estés cerca de una zona de pesca, detectando el signo de exclamación para capturar peces.
+This project provides a Python script to automate fishing in the video game **Digimon World: Next Order**. Using this script, your character will automatically fish when near a fishing zone, detecting the exclamation sign to catch fish.
 
-## Requisitos
+## Requirements
 
-Antes de ejecutar el script, asegúrate de tener instaladas las siguientes dependencias de Python:
+Before running the script, ensure you have the following Python dependencies installed:
 
 - `opencv-python`
 - `numpy`
@@ -13,29 +13,29 @@ Antes de ejecutar el script, asegúrate de tener instaladas las siguientes depen
 - `pynput`
 - `pyopengl`
 
-Puedes instalar todas las dependencias usando pip:
+You can install all dependencies using pip:
 
 ```sh
 pip install opencv-python numpy mss pynput pyopengl
 ```
 
-## Uso
+## Usage
 
-1. Clona este repositorio o descarga los archivos a tu máquina local.
-2. Asegúrate de tener las imágenes `pesca.png` y `pesca_signo.png` en la carpeta `img` dentro del directorio del script.
-3. Ejecuta el script principal `scriptdigimon.py`.
+1. Clone this repository or download the files to your local machine.
+2. Ensure you have the images `pesca.png` and `pesca_signo.png` in the `img` folder within the script directory.
+3. Run the main script `scriptdigimon.py`.
 
-### Ejecución del Script
+### Running the Script
 
-Abre una terminal en el directorio donde descargaste el script y ejecuta:
+Open a terminal in the directory where you downloaded the script and run:
 
 ```sh
 python scriptdigimon.py
 ```
 
-El script esperará 5 segundos para permitirte colocar el juego en la posición correcta y luego comenzará a buscar el área de pesca y el signo de exclamación para iniciar la pesca automática.
+The script will wait 5 seconds to allow you to position the game correctly and then start looking for the fishing area and the exclamation sign to initiate automatic fishing.
 
-## Estructura del Proyecto
+## Project Structure
 
 ```
 .
@@ -47,42 +47,41 @@ El script esperará 5 segundos para permitirte colocar el juego en la posición 
 └── README.md
 ```
 
-## Descripción del Script
+## Script Description
 
-- **screenshot(region)**: Captura una pantalla completa o una región específica de la pantalla.
-- **find_fishing_area(template_path, threshold, method, region)**: Busca el área de pesca en la pantalla.
-- **find_exclamation_sign(template_path, threshold, method, region)**: Busca el signo de exclamación en una región específica.
-- **fish(exclamation_region)**: Ejecuta el proceso de pesca, simulando pulsaciones de teclas para capturar el pez.
-- **main()**: Función principal que ejecuta el ciclo de pesca.
+- **screenshot(region)**: Captures a full-screen or a specific region of the screen.
+- **find_fishing_area(template_path, threshold, method, region)**: Searches for the fishing area on the screen.
+- **find_exclamation_sign(template_path, threshold, method, region)**: Searches for the exclamation sign in a specific region.
+- **fish(exclamation_region)**: Executes the fishing process, simulating key presses to catch the fish.
+- **main()**: Main function that runs the fishing cycle.
 
-## Contribución
+## Contribution
 
-Si deseas contribuir a este proyecto, por favor, abre un issue o envía un pull request con tus mejoras.
+If you want to contribute to this project, please open an issue or submit a pull request with your improvements.
 
-## Advertencia importante
+## Important Warning
 
-Este Script unicamente funciona por detección de pantalla, por lo que la zona de pesca programada dependerá del archivo que tome como referencia en pesca.png; en este caso está programado para el estanque de pesca #2 de floatia en la zona de entretenimiento con seadramon. Si quieres cambiar el lugar programado, sigue los siguientes pasos
+This script only works through screen detection, so the programmed fishing zone will depend on the reference file in pesca.png; in this case, it is programmed for fishing pond #2 in Floatia's entertainment zone with Seadramon. If you want to change the programmed place, follow these steps:
 
-1. Ve a la zona de pesca que quieras en Digimon World: Next Order
-2. Captura la pantalla completa cuando aparezca el icono de pesca y los digimon tengan su barra de vida en la pantalla.
-3. Reemplaza el archivo pesca.png por la captura de pantalla que acabas de subir y reenombralo como pesca.png o cambia la ruta del codigo en las siguientes lineas:
+1. Go to the fishing zone you want in Digimon World: Next Order.
+2. Capture the full screen when the fishing icon appears and the Digimon have their health bars on the screen.
+3. Replace the pesca.png file with the screenshot you just took and rename it to pesca.png or change the code path in the following lines:
 
 ```sh
 template_path = r'C:\Users\juane\Desktop\Programas Samir\scriptspython\img\pesca.png'
 signo_path = r'C:\Users\juane\Desktop\Programas Samir\scriptspython\img\ruta.png'
 ```
-4. Asegurate que *signo_path* sea la captura del signo de admiración cuando sale que ya puedes pescar en esa zona nueva que acabas de cambiar.
 
-## Licencia
+4. Ensure that *signo_path* is the capture of the exclamation sign when it shows that you can fish in the new zone you just changed.
 
-Este proyecto está licenciado bajo la MIT License. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+## License
 
-### Notas Adicionales
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-1. **Seguridad**: Asegúrate de que tu juego esté en primer plano y en la zona de pesca cuando ejecutes el script.
-2. **Permisos de Administrador**: Ejecuta la terminal o el entorno de desarrollo como administrador para asegurar que el script tenga los permisos necesarios.
-3. **Ajustes de Resolución**: Ajusta las resoluciones de `screen_width` y `screen_height` en el script según tu pantalla.
+### Additional Notes
 
+1. **Security**: Make sure your game is in the foreground and in the fishing zone when you run the script.
+2. **Administrator Permissions**: Run the terminal or development environment as an administrator to ensure the script has the necessary permissions.
+3. **Resolution Settings**: Adjust the resolutions of `screen_width` and `screen_height` in the script according to your screen.
 
-
-Si tienes más preguntas o necesitas ayuda, no dudes en abrir un issue en el repositorio. ¡Feliz pesca en el mundo de Digimon!
+If you have more questions or need help, feel free to open an issue in the repository. Happy fishing in the world of Digimon!
